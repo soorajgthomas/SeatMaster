@@ -11,6 +11,8 @@ public class SeatMasterApplicationTests {
 
 	@Test
 	public void contextLoads() {
+		
+		
 	}
 
 }
