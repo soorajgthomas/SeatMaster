@@ -1,24 +1,48 @@
 var firstSeatLabel = 1;
 		
 			$(document).ready(function() {
-				
-				var model="A330";
-				var airlinecode="CX";
-				var mapLayoutData=getMapLayoutData(model,airlinecode);
-				alert
 				var $cart = $('#selected-seats'),
 					$counter = $('#counter'),
 					$total = $('#total'),
 					sc = $('#seat-map').seatCharts({
-					map: mapLayoutData.map,
-					seats: mapLayoutData.seats,
+					map: [
+						'ff_ff',
+						'ff_ff',
+						'ee_ee',
+						'ee_ee',
+						'ee___',
+						'ee_ee',
+						'ee_ee',
+						'ee_ee',
+						'eeeee',
+					],
+					seats: {
+						f: {
+							price   : 100,
+							classes : 'first-class', //your custom CSS class
+							category: 'First Class'
+						},
+						e: {
+							price   : 40,
+							classes : 'economy-class', //your custom CSS class
+							category: 'Economy Class'
+						}					
+					
+					},
 					naming : {
-						top : true,
+						top : false,
 						getLabel : function (character, row, column) {
 							return firstSeatLabel++;
 						},
 					},
-					legend : mapLayoutData.legend,
+					legend : {
+						node : $('#legend'),
+					    items : [
+							[ 'f', 'available',   'First Class' ],
+							[ 'e', 'available',   'Economy Class'],
+							[ 'f', 'unavailable', 'Already Booked']
+					    ]					
+					},
 					click: function () {
 						if (this.status() == 'available') {
 							//let's create a new <li> which we'll add to the cart items
@@ -77,90 +101,4 @@ var firstSeatLabel = 1;
 			});
 			
 			return total;
-		}
-
-		
-		
-		function getMapLayoutData(model,airlinecode)
-		{
-			//ajaxcall with model and ailrinecode params
-			var retresult={
-					map: ['x___x',
-					      'l___l',
-					      '_c___c_',
-					      'dd__dd',
-						'_c___c_',
-						'dd__dd',
-						'w___w',
-						'eee_eee',
-						'eee_eee',
-						'x___x',
-						'eee_eee',
-						'eee_eee',
-						'eee_eee',
-						'eee_eee',
-						'eee_eee',
-						
-						'w___w',
-						'eee_eee',
-						'eee_eee',
-						'eee_eee',
-						'eee_eee',
-						'eee_eee',
-						'eee_eee',
-						'eee_eee',
-						'eee_eee',
-						'ee__ee',
-						'eee_eee',
-						'eee_eee',
-						'eee_eee',
-						'eee_eee',
-						'eee_eee',
-						'l___l',
-						
-					],
-					seats: {
-						f: {
-							price   : 100,
-							classes : 'first-class', //your custom CSS class
-							category: 'First Class'
-						},
-						e: {
-							price   : 40,
-							classes : 'economy-class', //your custom CSS class
-							category: 'Economy Class'
-						},
-						a: {
-							price   : 200,
-							classes : 'first-class middle-seat', //your custom CSS class
-							category: 'First-Class'
-						},
-						c: {
-							price   : 40,
-							classes : 'first-class prime-seat', //your custom CSS class
-							category: 'First Class '
-						},
-						d: {
-							price   : 40,
-							classes : 'first-class normal-seat', //your custom CSS class
-							category: 'First Class'
-						},
-						
-						
-						
-					
-					},
-					
-					legend : {
-						node : $('#legend'),
-					    items : [
-							[ 'f', 'available',   'First Class' ],
-							[ 'a', 'available',   'First Middle Class' ],
-							[ 'e', 'available',   'Economy Class'],
-							[ 'g', 'unavailable', 'Already Booked']
-					    ]					
-					}
-				};
-			
-			return retresult;
 		}
