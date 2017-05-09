@@ -22,7 +22,7 @@ public class WelcomeController {
 	public ModelAndView test() {
 		
 		ModelAndView model = new ModelAndView();
-        model.setViewName("test");
+        model.setViewName("index");
         return model;
 	}
 	
@@ -32,6 +32,24 @@ public class WelcomeController {
 		
 		ModelAndView model = new ModelAndView();
         model.setViewName("streetView");
+        return model;
+	}
+	
+	@GetMapping("/dbtest") 
+	public ModelAndView dbTest() {
+		
+		
+		String imagePath = "D:/Android-Bag-Image.jpg";
+		try {
+			Icon icon = new Icon(ImageUtils.readBytesFromFile(imagePath), ImageUtils.readBytesFromFile(imagePath));
+			iconDao.saveData(icon);
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		ModelAndView model = new ModelAndView();
+        model.setViewName("test");
         return model;
 	}
 	

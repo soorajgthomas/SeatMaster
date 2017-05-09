@@ -1,0 +1,215 @@
+
+body {
+    font-family: "Lato",sans-serif;
+}
+a {
+    color: #b71a4c;
+}
+.front-indicator {
+    background-color: #f6f6f6;
+    border-radius: 5px;
+    color: #adadad;
+    margin: 5px 32px 15px;
+    padding: 3px;
+    text-align: center;
+    width: 145px;
+}
+.wrapper {
+    text-align: center;
+    width: 100%;
+}
+.container {
+    margin: 0 auto;
+    text-align: left;
+    width: 500px;
+}
+.booking-details {
+    float: left;
+    font-size: 12px;
+    height: 401px;
+    margin-left: 35px;
+    position: relative;
+    text-align: left;
+}
+.booking-details h2 {
+    font-size: 17px;
+    margin: 25px 0 20px;
+}
+.booking-details h3 {
+    font-size: 14px;
+    margin: 5px 5px 0 0;
+}
+div.seatCharts-cell {
+    color: #182c4e;
+    height: 25px;
+    line-height: 25px;
+    width: 25px;
+}
+div.seatCharts-seat {
+    color: #ffffff;
+    cursor: pointer;
+}
+div.seatCharts-row {
+    height: 35px;
+}
+div.seatCharts-seat.available {
+    background-color: #b9dea0;
+}
+div.seatCharts-seat.available.first-class {
+    background-color: #3a78c3;
+}
+div.seatCharts-seat.focused {
+    background-color: #76b474;
+}
+div.seatCharts-seat.selected {
+    background-color: #e6cac4;
+}
+div.seatCharts-seat.unavailable {
+    background-color: #472b34;
+}
+div.seatCharts-container {
+    border-right: 1px dotted #adadad;
+    float: left;
+    margin-left: 99px;
+    margin-top: 200px;
+   
+}
+div.seatCharts-legend {
+    bottom: 16px;
+    padding-left: 0;
+    position: absolute;
+}
+ul.seatCharts-legendList {
+    padding-left: 0;
+}
+span.seatCharts-legendDescription {
+    line-height: 30px;
+    margin-left: 5px;
+}
+.checkout-button {
+    display: block;
+    font-size: 14px;
+    margin: 10px 0;
+}
+#selected-seats {
+    max-height: 90px;
+    overflow-y: scroll;
+    width: 170px;
+}
+.mapbackground {
+	background: rgba(0, 0, 0, 0) url("../images/plane.png") no-repeat scroll left;
+   	height: 2300px;
+}
+div.seatCharts-seat.available.first-middle-class {
+    background-color: #f00;
+    
+}
+div.seatCharts-row .seatCharts-seat.middle-seat {
+	margin:-15px 12px 0 13px;
+}
+div.seatCharts-row .seatCharts-seat.first-middle-class.focused {
+	margin:-15px 12px 0 13px;
+    background-color: #76b474;
+}
+div.seatCharts-seat.available.first-class {
+   
+    background: rgba(0, 0, 0, 0) url("../icons/first_class.png") no-repeat scroll center;
+    background-size: cover;
+}
+div.seatCharts-seat.first-class.focused {
+    background: rgba(0, 0, 0, 0) url("../icons/first_class.png") no-repeat scroll center;
+    background-size: cover;
+    -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+div.seatCharts-seat.first-class.unavailable {
+	filter: grayscale(100%);
+    background: rgba(0, 0, 0, 0) url("../icons/first_class.png") no-repeat scroll center;
+    background-size: cover;
+    
+}
+div.seatCharts-cell {
+    margin: 0px;
+   
+}
+
+div.seatCharts-seat.available.economy-class {
+   
+    background: rgba(0, 0, 0, 0) url("../icons/economy_class.png") no-repeat scroll center;
+    background-size: cover;
+  
+}
+div.seatCharts-seat.economy-class.focused {
+    background: rgba(0, 0, 0, 0) url("../icons/economy_class.png") no-repeat scroll center;
+    background-size: cover;
+    -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+div.seatCharts-seat.economy-class.unavailable {
+	filter: grayscale(100%);
+    background: rgba(0, 0, 0, 0) url("../icons/economy_class.png") no-repeat scroll center;
+    background-size: cover;
+    
+}
+
+div.seatCharts-seat.seatCharts-cell.economy-class{
+	width: 20px;
+}
+
+	div.seatCharts-cell.seatCharts-space.economy-class {
+	  width: 51px;
+
+	}
+
+
+div.seatCharts-seat.seatCharts-cell.first-class.normal-seat{
+	margin: 3px;
+}
+div.pre-scrollable.map-parentdiv{
+	 max-height: 700px;
+}
+
+div.seatCharts-seat.available.first-class.prime-seat {
+   
+    background: rgba(0, 0, 0, 0) url("../icons/prime.png") no-repeat scroll center;
+    background-size: cover;
+}
+div.seatCharts-seat.first-class.focused.prime-seat {
+    background: rgba(0, 0, 0, 0) url("../icons/prime.png") no-repeat scroll center;
+    background-size: cover;
+    -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+div.seatCharts-seat.first-class.unavailable.prime-seat {
+	filter: grayscale(100%);
+    background: rgba(0, 0, 0, 0) url("../icons/first_class.png") no-repeat scroll center;
+    background-size: cover;
+    
+}
+div.seatCharts-cell.seatCharts-space {
+	  opacity: 0.0;
+
+	}
+	div.seatCharts-cell.seatCharts-exit{
+	 background: rgba(0, 0, 0, 0) url("../icons/exit_icon_green.png") no-repeat scroll center;
+    background-size: cover;
+    width:50px
+	}
+	div.seatCharts-cell.lavatory-space{
+	 background: rgba(0, 0, 0, 0) url("../icons/lavatory_icon.png") no-repeat scroll center;
+    background-size: cover;
+    width:50px
+    }
+    div.seatCharts-cell.seatCharts-wall{
+	 background: rgba(0, 0, 0, 0) url("../icons/exit_icon_green.png") no-repeat scroll center;
+    background-size: cover;
+    height: 2px;
+    width:50px;
+    margin:11px 0px 0 0px;
+	}
+	div.seatCharts-cell.seatCharts-space{
+	width:25px;}
+
