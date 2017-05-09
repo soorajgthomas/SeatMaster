@@ -173,11 +173,11 @@ div.pre-scrollable.map-parentdiv{
 
 div.seatCharts-seat.available.first-class.prime-seat {
    
-    background: rgba(0, 0, 0, 0) url("../icons/prime.png") no-repeat scroll center;
+    background: rgba(0, 0, 0, 0) url("../icons/first_class.png") no-repeat scroll center;
     background-size: cover;
 }
 div.seatCharts-seat.first-class.focused.prime-seat {
-    background: rgba(0, 0, 0, 0) url("../icons/prime.png") no-repeat scroll center;
+    background: rgba(0, 0, 0, 0) url("../icons/first_class.png") no-repeat scroll center;
     background-size: cover;
     -moz-transform: scale(1.1);
   -webkit-transform: scale(1.1);
