@@ -72,7 +72,7 @@
 					</ul>
 					Total: <b>$<span id="total">80</span></b>
 
-					<button class="checkout-button">Checkout »</button>					
+					<button class="checkout-button">Checkout ï¿½</button>					
 					
 					<div class="panel panel-info" id="Legend">
       					<div class="panel-heading">Seat Legend</div>
@@ -83,11 +83,8 @@
 	      					<div class="span4 proj-div" data-toggle="modal" data-target="#pop">
 	      						<img src="icons/first_class.png" width="60" onClick="loadFirst();"><span>First_class</span>
 	      					</div>
-	      					<div class="span4 proj-div" data-toggle="modal" data-target="#pop">
-	      						<img src="icons/prime.png" width="60" onClick="loadBusiness();"><span>Business</span>
-	      					</div>
 	      					<div class="span4 proj-div" data-toggle="modal" data-target="#tour">
-	      						<img src="icons/clk2.png" width="80" onClick="loadTour();"><span>Take virtual tour of cabin</span>
+	      						<img src="icons/clk2.png" width="100" onClick="loadTour();"><span>Take virtual tour of cabin</span>
 	      					</div>
       					</div>
     				</div>
