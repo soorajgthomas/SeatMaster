@@ -71,7 +71,7 @@ div.seatCharts-container {
     border-right: 1px dotted #adadad;
     float: left;
     margin-left: 99px;
-    margin-top: 200px;
+    margin-top: 278px;
    
 }
 div.seatCharts-legend {
@@ -98,7 +98,7 @@ span.seatCharts-legendDescription {
 }
 .mapbackground {
 	background: rgba(0, 0, 0, 0) url("../images/plane.png") no-repeat scroll left;
-   	height: 2300px;
+   	height: 1925px;
 }
 div.seatCharts-seat.available.first-middle-class {
     background-color: #f00;
@@ -173,11 +173,11 @@ div.pre-scrollable.map-parentdiv{
 
 div.seatCharts-seat.available.first-class.prime-seat {
    
-    background: rgba(0, 0, 0, 0) url("../icons/first_class.png") no-repeat scroll center;
+    background: rgba(0, 0, 0, 0) url("../icons/prime.png") no-repeat scroll center;
     background-size: cover;
 }
 div.seatCharts-seat.first-class.focused.prime-seat {
-    background: rgba(0, 0, 0, 0) url("../icons/first_class.png") no-repeat scroll center;
+    background: rgba(0, 0, 0, 0) url("../icons/prime.png") no-repeat scroll center;
     background-size: cover;
     -moz-transform: scale(1.1);
   -webkit-transform: scale(1.1);
