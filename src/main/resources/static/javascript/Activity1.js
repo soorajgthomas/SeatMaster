@@ -1,7 +1,7 @@
 var firstSeatLabel = 1;
-		
+
 			$(document).ready(function() {
-				
+
 				var model="A330";
 				var airlinecode="CX";
 				var mapLayoutData=getMapLayoutData(model,airlinecode);
@@ -26,7 +26,7 @@ var firstSeatLabel = 1;
 								.attr('id', 'cart-item-'+this.settings.id)
 								.data('seatId', this.settings.id)
 								.appendTo($cart);
-							
+
 							/*
 							 * Lets update the counter and total
 							 *
@@ -35,17 +35,17 @@ var firstSeatLabel = 1;
 							 */
 							$counter.text(sc.find('selected').length+1);
 							$total.text(recalculateTotal(sc)+this.data().price);
-							
+
 							return 'selected';
 						} else if (this.status() == 'selected') {
 							//update the counter
 							$counter.text(sc.find('selected').length-1);
 							//and total
 							$total.text(recalculateTotal(sc)-this.data().price);
-						
+
 							//remove the item from our cart
 							$('#cart-item-'+this.settings.id).remove();
-						
+
 							//seat has been vacated
 							return 'available';
 						} else if (this.status() == 'unavailable') {
@@ -65,32 +65,34 @@ var firstSeatLabel = 1;
 
 				//let's pretend some seats have already been booked
 				sc.get(['1_2', '4_1', '7_1', '7_2']).status('unavailable');
-		
+
 		});
 
 		function recalculateTotal(sc) {
 			var total = 0;
-		
+
 			//basically find every selected seat and sum its price
 			sc.find('selected').each(function () {
 				total += this.data().price;
 			});
-			
+
 			return total;
 		}
 
-		
-		
+
+
 		function getMapLayoutData(model,airlinecode)
 		{
 			//ajaxcall with model and ailrinecode params
 			var retresult={
-					map: ['x___x',
-					      'l___l',
-					      '_c___c_',
-					      'dd__dd',
-						'_c___c_',
-						'dd__dd',
+					map: ['c_dd_c',
+					      'c_dd_c',
+					      'c_dd_c',
+					      'c_dd_c',
+					      'c_dd_c',
+					      'c_dd_c',
+					      'c_dd_c',
+
 						'w___w',
 						'eee_eee',
 						'eee_eee',
@@ -100,7 +102,7 @@ var firstSeatLabel = 1;
 						'eee_eee',
 						'eee_eee',
 						'eee_eee',
-						
+
 						'w___w',
 						'eee_eee',
 						'eee_eee',
@@ -117,7 +119,7 @@ var firstSeatLabel = 1;
 						'eee_eee',
 						'eee_eee',
 						'l___l',
-						
+
 					],
 					seats: {
 						f: {
@@ -145,12 +147,12 @@ var firstSeatLabel = 1;
 							classes : 'first-class normal-seat', //your custom CSS class
 							category: 'First Class'
 						},
-						
-						
-						
-					
+
+
+
+
 					},
-					
+
 					legend : {
 						node : $('#legend'),
 					    items : [
@@ -158,9 +160,9 @@ var firstSeatLabel = 1;
 							[ 'a', 'available',   'First Middle Class' ],
 							[ 'e', 'available',   'Economy Class'],
 							[ 'g', 'unavailable', 'Already Booked']
-					    ]					
+					    ]
 					}
 				};
-			
+
 			return retresult;
 		}

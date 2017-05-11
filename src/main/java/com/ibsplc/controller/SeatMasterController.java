@@ -32,8 +32,12 @@ public class SeatMasterController {
 		request.getSession().setAttribute("flight_model", flight_model);
 		request.getSession().setAttribute("flight_model", model.getModel().get("lat"));
 		request.getSession().setAttribute("flight_model", model.getModel().get("lon"));
-		
-        model.setViewName("home");
+
+		if (request.getParameter("flight").contains("SAS")) {
+			model.setViewName("home1");
+		} else {
+			model.setViewName("home");
+		}
         return model;
 	
 	}
@@ -48,7 +52,11 @@ public class SeatMasterController {
 		model.addObject("lon", request.getSession().getAttribute("lon"));
 		
 		model.addObject("fly1", flight_model);
-        model.setViewName("home");
+		if (request.getParameter("flight").contains("SAS")) {
+			model.setViewName("home1");
+		} else {
+			model.setViewName("home");
+		}
         return model;
 	
 	}
