@@ -10,7 +10,8 @@
 	</head>
 	
 	<body>
-		<div id="myCar" style="background: url(&quot;assets/img/Economy/1.jpg&quot;) no-repeat center; height: 1000px; width: 500px;" align="center"><div id="VCc" style="height:100%;width:100%;" class=""></div>
+	    <div style="padding:40px; width:200px; margin-left: 573px;  background-color: white; margin-top:10px;border: 3px solid green; border-radius: 42px;"><h4>Accessories</h3><ul style="text-align:left"><li>Head Phone</li><li>Sleep Mask</li></ul></div>
+		<div id="myCar" style="background: url(&quot;assets/img/Economy/1.jpg&quot;) no-repeat center; height: 518px; width: 500px;" align="center"><div id="VCc" style="height:100%;width:100%;" class=""></div>
 			<img src="assets/img/Economy/1.jpg" style="display:none;">
 			<img src="assets/img/Economy/2.jpg" style="display:none;">
 			<img src="assets/img/Economy/3.jpg" style="display:none;">

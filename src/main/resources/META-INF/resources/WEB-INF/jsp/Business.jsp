@@ -20,7 +20,8 @@
 	</head>
 	
 	<body>
-		<div id="myCar" style="background: url(&quot;assets/img/Business/36.png&quot;) no-repeat center; height: 1000px; width: 500px;" align="center"><div id="VCc" style="height:100%;width:100%;" class=""></div>
+	    <div style="padding:40px; width:200px; margin-left: 573px;  background-color: white; margin-top:10px;border: 3px solid green; border-radius: 42px;"><h4>Accessories</h3><ul style="text-align:left"><li>Wifi</li><li>Head Phone</li><li>Hand free iPad mount</li><li>Sleep Mask</li></ul></div>
+		<div id="myCar" style="background: url(&quot;assets/img/Business/36.png&quot;) no-repeat center; height: 518px; width: 500px;" align="center"><div id="VCc" style="height:100%;width:100%;" class=""></div>
 			<img src="assets/img/Business/1.png" style="display:none;">
 			<img src="assets/img/Business/2.png" style="display:none;">
 			<img src="assets/img/Business/3.png" style="display:none;">
