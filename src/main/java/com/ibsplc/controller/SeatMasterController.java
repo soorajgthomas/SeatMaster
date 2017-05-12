@@ -6,13 +6,21 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.ibsplc.dao.AirlineModelDao;
+import com.ibsplc.entities.AirlineModel;
+
 @Controller
 public class SeatMasterController {
+	
+	@Autowired
+	AirlineModelDao airlineModelDao;
+	
 	
 	@PostMapping("/SeatMaster")
 	protected ModelAndView displaySeatMaster(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -21,23 +29,27 @@ public class SeatMasterController {
 		
 		ModelAndView model = new ModelAndView();		
 		model.addObject("fly1", flight_model);
-		if (request.getParameter("flight").contains("SAS")) {
-			model.addObject("lat", "55.6314668");
-			model.addObject("lon", "12.6621834");
-		} else {
-			model.addObject("lat", "53.4228485");
-			model.addObject("lon", "-6.2393878");
-		}
 		
-		request.getSession().setAttribute("flight_model", flight_model);
-		request.getSession().setAttribute("flight_model", model.getModel().get("lat"));
-		request.getSession().setAttribute("flight_model", model.getModel().get("lon"));
-
-		if (request.getParameter("flight").contains("SAS")) {
-			model.setViewName("home1");
-		} else {
-			model.setViewName("home");
-		}
+		AirlineModel airlineModel = airlineModelDao.getAirlineModelByFlightModel(flight_model);
+		
+		if(airlineModel != null && airlineModel.getLat() != null && airlineModel.getLon() !=null) {
+			model.addObject("lat", airlineModel.getLat());
+			model.addObject("lon", airlineModel.getLon());
+			
+			request.getSession().setAttribute("flight_model", flight_model);
+			request.getSession().setAttribute("lat", model.getModel().get("lat"));
+			request.getSession().setAttribute("lon", model.getModel().get("lon"));
+			
+			model.addObject("id", airlineModel.getId());
+						
+			if (request.getParameter("flight").contains("SAS")) {
+				model.setViewName("home1");
+			} else {
+				model.setViewName("home");
+			}
+		}		
+	
+		
         return model;
 	
 	}
@@ -47,12 +59,13 @@ public class SeatMasterController {
 		
 		ModelAndView model = new ModelAndView();
 		
-		String flight_model = (String) request.getSession().getAttribute("fly1");
+		String flight_model = (String) request.getSession().getAttribute("flight_model");
+		System.out.println("flight_model" + flight_model);
 		model.addObject("lat", request.getSession().getAttribute("lat"));
 		model.addObject("lon", request.getSession().getAttribute("lon"));
 		
 		model.addObject("fly1", flight_model);
-		if (request.getParameter("flight").contains("SAS")) {
+		if (flight_model.contains("SAS")) {
 			model.setViewName("home1");
 		} else {
 			model.setViewName("home");
