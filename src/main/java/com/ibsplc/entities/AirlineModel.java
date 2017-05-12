@@ -22,7 +22,10 @@ public class AirlineModel {
 	private String airlineModel;
 	
 	@Column
-	private String location;
+	private String lat;
+	
+	@Column
+	private String lon;
 	
 	@JoinColumn(nullable = true, referencedColumnName="id")
 	@ManyToOne(fetch = FetchType.EAGER)
@@ -35,16 +38,18 @@ public class AirlineModel {
 		this.id = id;
 	}
 
-	public AirlineModel(String airlineModel, String location, JsonLayout jsonLayout) {
+	public AirlineModel(String airlineModel, String lat, String lon, JsonLayout jsonLayout) {
 		this.airlineModel = airlineModel;
-		this.location = location;
+		this.lat = lat;
+		this.lon = lon;
 		this.jsonLayout = jsonLayout;
 	}
 
-	public AirlineModel(Long id, String airlineModel, String location, JsonLayout jsonLayout) {
+	public AirlineModel(Long id, String airlineModel, String lat, String lon, JsonLayout jsonLayout) {
 		this.id = id;
 		this.airlineModel = airlineModel;
-		this.location = location;
+		this.lat = lat;
+		this.lon = lon;
 		this.jsonLayout = jsonLayout;
 	}
 
@@ -64,12 +69,20 @@ public class AirlineModel {
 		this.airlineModel = airlineModel;
 	}
 
-	public String getLocation() {
-		return location;
+	public String getLat() {
+		return lat;
 	}
 
-	public void setLocation(String location) {
-		this.location = location;
+	public void setLat(String lat) {
+		this.lat = lat;
+	}
+
+	public String getLon() {
+		return lon;
+	}
+
+	public void setLon(String lon) {
+		this.lon = lon;
 	}
 
 	public JsonLayout getJsonLayout() {

@@ -2,16 +2,22 @@ package com.ibsplc.daoImpl;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Projections;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import com.ibsplc.dao.JsonLayoutDao;
+import com.ibsplc.entities.AirlineModel;
 import com.ibsplc.entities.JsonLayout;
 
+@Repository
+@Transactional
 public class JsonLayoutDaoImpl implements JsonLayoutDao {
 
 	@Autowired
@@ -51,7 +57,7 @@ public class JsonLayoutDaoImpl implements JsonLayoutDao {
             e.printStackTrace();
         }
         return jsonLayout;
-    }
+    }       
     
     
     @Override

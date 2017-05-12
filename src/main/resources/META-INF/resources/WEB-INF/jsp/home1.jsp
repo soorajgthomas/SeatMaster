@@ -59,6 +59,7 @@ function loadBusiness() {
 </head>
 <body>
 <input type="hidden" id="flightname" value=${fly1}>
+<input type="hidden" id="flightId" value="${id}" >
 <div id="custom-bootstrap-menu" class="navbar navbar-default " role="navigation">
     <div class="container">
         <div class="navbar-header"><a class="navbar-brand" href="#">SeatMaster</a>

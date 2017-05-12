@@ -14,7 +14,7 @@
 <link href="http://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="js/jquery.seat-charts.js"></script>
-<script type="text/javascript" src="javascript/Activity.js"></script>
+
 <script src="js/jquery.backstretch.js" type="text/javascript"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -23,6 +23,7 @@
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
 <link href="css/button.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="javascript/Activity.js"></script>
 <script>
 function loadEconomy() {
 	$("#pop").load("Economy");
@@ -40,7 +41,8 @@ function loadBusiness() {
 </head>
 
 <body>
-<input type="hidden" id="flightname" value=${fly1}>
+<input type="hidden" id="flightname" value="${fly1}">
+<input type="hidden" id="flightId" value="${id}" >
 <div id="custom-bootstrap-menu" class="navbar navbar-default " role="navigation">
     <div class="container">
         <div class="navbar-header"><a class="navbar-brand" href="#">SeatMaster</a>

@@ -2,6 +2,7 @@ package com.ibsplc.dao;
 
 import java.util.List;
 
+import com.ibsplc.entities.AirlineModel;
 import com.ibsplc.entities.JsonLayout;
 
 public interface JsonLayoutDao {
