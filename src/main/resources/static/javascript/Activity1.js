@@ -138,12 +138,12 @@ var firstSeatLabel = 1;
 							category: 'First-Class'
 						},
 						c: {
-							price   : 40,
+							price   : 90,
 							classes : 'first-class prime-seat', //your custom CSS class
 							category: 'First Class '
 						},
 						d: {
-							price   : 40,
+							price   : 70,
 							classes : 'first-class normal-seat', //your custom CSS class
 							category: 'First Class'
 						},

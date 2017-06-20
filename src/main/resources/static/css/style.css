@@ -143,6 +143,10 @@ legend
     transition: all .3s;
 }
 
+.header1 {
+    color: grey;
+}
+
 textarea, 
 textarea.form-control {
 	padding-top: 10px;
