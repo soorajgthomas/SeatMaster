@@ -184,7 +184,7 @@ function loadBusiness() {
 
 						</table>
 						<div class="w3-card-12" style="width:100%" data-toggle="modal" data-target="#tour">
-							<img src="icons/clk2.gif" width="80" style="margin-left: 175px;">									
+							<img src="icons/clk2.png" width="80" style="margin-left: 175px;">									
 						</div>
 					
 					
