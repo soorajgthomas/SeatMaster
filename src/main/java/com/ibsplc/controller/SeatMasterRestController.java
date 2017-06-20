@@ -1,6 +1,7 @@
 package com.ibsplc.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,13 +24,12 @@ public class SeatMasterRestController {
 	JsonLayoutDao jsonLayoutDao;
 	
 	
-	@PostMapping("/getSeatLayout")
-	public String  getSeatLayout(@RequestParam(value="id") String input) {
+	@GetMapping("/getSeatLayout")
+	public String  getSeatLayout(@RequestParam(value="id") Long input) {
 		System.out.println("\n\n /getSeatLayout : "+input);
-		
 		//AirlineModel airlineModel = airlineModelDao.getJsonLayoutByAirlineModel(new JsonLayout(Long.valueOf(1)));
 		
-		JsonLayout jsonLayout = jsonLayoutDao.getJsonLayoutById(Long.valueOf(1));
+		JsonLayout jsonLayout = jsonLayoutDao.getJsonLayoutById(input);
 		
 		return jsonLayout.getJsonString();
 	}
